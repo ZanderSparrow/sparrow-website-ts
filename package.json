@@ -1,6 +1,7 @@
 {
   "name": "sparrow-portfolio-ts",
   "version": "1.0.0",
+  "homepage": "https://ZanderSparrow.github.io/sparrow-website-ts",
   "private": true,
   "description": "sparrow-portfolio-ts",
   "author": "Zander Sparrow",
@@ -8,6 +9,8 @@
     "gatsby"
   ],
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -32,6 +35,7 @@
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.1.6"
   }
 }
