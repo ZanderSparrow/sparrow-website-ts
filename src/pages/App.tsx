@@ -1,10 +1,14 @@
 import React, { useRef } from 'react'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
+import { navigate } from 'gatsby'
+import  pdf  from "../types.s";
 import ResumePreview from '../images/resume_preview.png'
 
 // Little helpers ...
 const url = (name: string, wrap = false) =>
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
+
+const resumePDF = pdf("AlexanderSparrow2023Resume.pdf");
 
 export default function App() {
   const parallax = useRef<IParallax>(null!)
@@ -105,17 +109,16 @@ export default function App() {
           <img src={url('bash')} style={{ width: '40%' }} />
         </ParallaxLayer>
 
-        <ParallaxLayer
+        <a href={resumePDF}><ParallaxLayer
           offset={2}
           speed={-0}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}
-          onClick={() => parallax.current.scrollTo(0)}>
-          <img src={ResumePreview} style={{ width: '40%', borderRadius: '3%' }} />
-        </ParallaxLayer>
+          }}>
+          <img className="resume-preview" src={ResumePreview} style={{ width: '40%', borderRadius: '3%' }} />
+        </ParallaxLayer></a>
       </Parallax>
     </div>
   )
