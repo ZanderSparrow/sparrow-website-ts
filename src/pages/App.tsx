@@ -3,6 +3,7 @@ import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import { navigate } from 'gatsby'
 import  pdf  from "../types.s";
 import ResumePreview from '../images/resume_preview.png'
+import './app.css'
 
 // Little helpers ...
 const url = (name: string, wrap = false) =>
@@ -114,10 +115,11 @@ export default function App() {
           speed={-0}
           style={{
             display: 'flex',
+            minWidth: '75%',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <img className="resume-preview" src={ResumePreview} style={{ width: '40%', borderRadius: '3%' }} />
+          <img className="resume-preview" src={ResumePreview} />
         </ParallaxLayer></a>
       </Parallax>
     </div>
