@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import './index.css'
 
 import App from "./App"
+import Footer from '../components/footer'
 
 // const IndexPage: React.FC = () => (
 // 	<BrowserRouter>
@@ -16,6 +17,7 @@ const IndexPage = ({}: PageProps) => {
   return (
     <main>
       <App />
+      <Footer />
     </main>
   )
 }
