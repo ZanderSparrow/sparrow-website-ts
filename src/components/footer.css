@@ -1,11 +1,20 @@
 #sticky-footer {
-    padding: 5px 0;
+    padding: 2.5px 0;
     color:aliceblue;
     font-size: 14px;
-    background-color: black;
+    background-color:rgba(0, 0, 0, 0.5);
     text-align: center; /* optional */
     position: absolute;
     bottom: 0;
     width: 100%;
     left: 0;
-  }
+}
+
+p {
+    display: flexbox;
+}
+
+.social {
+    text-align: left;
+    margin-right: 20px;
+}
