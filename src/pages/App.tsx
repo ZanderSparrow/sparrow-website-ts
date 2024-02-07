@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div style={{ width: '100%', height: '100%', background: '#000' }}>
       <Parallax ref={parallax} pages={3} style={{ backgroundColor: '#000' }}>
-        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+        <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#643e69' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
 
         <ParallaxLayer
@@ -71,15 +71,7 @@ export default function App() {
           <img src={url('earth')} style={{ width: '60%' }} />
         </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: '80%',
-            backgroundPosition: 'center',
-            backgroundImage: ResumePreview,
-          }}
-        />
+        <br />
 
         <ParallaxLayer
           offset={0}
